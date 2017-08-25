@@ -1,0 +1,10 @@
+# gitignore
+*.pyc
+__pycache__
+staticfiles
+*.sqlite3
+*.sqlite3-journal
+*.log*
+
+*.txt
+!requirements.txt

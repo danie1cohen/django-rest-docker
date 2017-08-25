@@ -1,0 +1,11 @@
+.env
+.vagrant
+cover
+.coverage
+README.md
+
+
+# ignore git files, except head which we use to check release version
+.git/*
+!.git/HEAD
+!.git/refs/heads/master
