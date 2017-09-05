@@ -22,7 +22,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '{{ secret_key }}')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if os.environ.get('DJANGO_DEBUG', False) == 'True' else False
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', 0))
 
 ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '').split(',')
 
@@ -106,11 +106,11 @@ LANGUAGE_CODE = os.environ.get('DJANGO_LANGUAGE_CODE', 'en-us')
 
 TIME_ZONE = os.environ.get('DJANGO_TIME_ZONE', 'UTC')
 
-USE_I18N = False if os.environ.get('DJANGO_USE_I18N', True) == 'False' else True
+USE_I18N = bool(os.environ.get('DJANGO_USE_I18N', True))
 
-USE_L10N = False if os.environ.get('DJANGO_USE_L10N', True) == 'False' else True
+USE_L10N = bool(os.environ.get('DJANGO_USE_L10N', True))
 
-USE_TZ = False if os.environ.get('DJANGO_USE_TZ', True) == 'False' else True
+USE_TZ = bool(os.environ.get('DJANGO_USE_TZ', True))
 
 
 #############################
